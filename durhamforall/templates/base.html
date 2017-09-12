@@ -18,8 +18,11 @@
                <title>Durham For All</title>
                <meta name="viewport" content="width=device-width,initial-scale=1">
                <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-               <link rel="stylesheet" href="http://www.durhamforall.org/themes/3/53b32226bfafd85bcd000004/0/attachments/14626768211504749731/default/theme.scss" type="text/css" />
-               <link rel="stylesheet" href="http://www.durhamforall.org/themes/3/53b32226bfafd85bcd000004/0/attachments/14626768211504749731/default/tablet-and-desktop.scss" type="text/css" media="screen and (min-width: 768px)" />
+
+               <link rel="stylesheet" href="{% static 'css/mobile.css' %}" type="text/css" />
+               <link rel="stylesheet" href="{% static 'css/desktop.css' %}" type="text/css" />
+
+               <!-- <link rel="stylesheet" href="http://www.durhamforall.org/themes/3/53b32226bfafd85bcd000004/0/attachments/14626768211504749731/default/tablet-and-desktop.scss" type="text/css" media="screen and (min-width: 768px)" /> -->
                <!-- because ie8 ignores media queries, we need this -->
                <!--[if IE 8]>
                <link rel="stylesheet" href="http://www.durhamforall.org/themes/3/53b32226bfafd85bcd000004/0/attachments/14626768211504749731/default/tablet-and-desktop.scss" type="text/css" />
@@ -294,9 +297,9 @@
                                        </div>
                                        <!-- /_signup_form.html -->
                                     </div>
-                                    <a class="button supporter-nav-button" href="http://www.durhamforall.org/donate">Donate</a>
-                                    <a class="button supporter-nav-button" href="http://www.durhamforall.org/volunteer">Volunteer</a>
-                                    <a class="button supporter-nav-button" href="http://www.durhamforall.org/contact_us">Contact Us</a>
+                                    <a class="button supporter-nav-button" href="/donate">Donate</a>
+                                    <a class="button supporter-nav-button" href="/volunteer">Volunteer</a>
+                                    <a class="button supporter-nav-button" href="/contact_us">Contact Us</a>
                                     <div class="padtop padbottom">
                                     </div>
                                  </div>
