@@ -21,7 +21,7 @@ six==1.10.0
 static3==0.7.0
 Unidecode==0.4.21
 urllib3==1.22
-wagtail==1.12.1
+wagtail==1.12.2
 webencodings==0.5.1
 whitenoise==3.3.0
 Willow==0.4
