@@ -429,7 +429,7 @@ textarea[class*="span"],
 [class*=" icon-"]:before,
 .flex-next:before,
 .flex-prev:before {
-    font-family: 'responsive';
+    font-family: FontAwesome;
     font-style: normal;
     font-weight: normal;
     speak: none;
