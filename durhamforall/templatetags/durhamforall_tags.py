@@ -1,4 +1,5 @@
 from django import template
+import random
 
 register = template.Library()
 
@@ -44,3 +45,15 @@ def top_menu_children(context, parent):
         # required by the pageurl tag that we want to use within this template
         'request': context['request'],
 }
+
+@register.inclusion_tag('tags/facebook_video_embed.html')
+def endorsement_video():
+    video_hrefs = [
+        'https://www.facebook.com/durham4all/videos/1524762284247929/',
+        'https://www.facebook.com/durham4all/videos/1496323170425174/',
+        'https://www.facebook.com/durham4all/videos/1480733335317491/',
+    ]
+
+    return {
+        'video_href': random.choice(video_hrefs),
+    }

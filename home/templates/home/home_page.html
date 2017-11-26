@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags durhamforall_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -10,14 +10,5 @@
 
 
 {% block content %}
-        <div class="body-content col-md-8">
-            <p style="text-align: center;"><img src="https://d3n8a8pro7vhmx.cloudfront.net/durhamforall/pages/106/attachments/original/1494637177/Screen_Shot_2017-05-12_at_5.35.52_PM.png?1494637177" alt="Screen_Shot_2017-05-12_at_5.35.52_PM.png" width="449px" height="465px"/></p>
-        </div>
-        <div class="col-md-4">
-
-
-    <a class="btn btn-default btn-lg btn-block" href="/donate">Donate</a>
-    <a class="btn btn-primary btn-lg btn-block" href="/pledge">Join Us!</a>
-    <a class="btn btn-default btn-lg btn-block" href="mailto:info@durhamforall.org">Contact Us</a>
-            </div>
+{% endorsement_video %}
 {% endblock %}
