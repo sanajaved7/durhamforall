@@ -7,7 +7,7 @@ $html-background-color: whitesmoke;
 $font-family-sans-serif: "Oswald", sans-serif;
 $font-family-serif: "Droid Serif", serif;
 $font-family-base: $font-family-serif;
-$font-size-base: 15px;
+$font-size-base: 16px;
 $headings-font-family: $font-family-sans-serif;
 $brand-primary: #53cfd7;
 $jumbotron-bg: #fff;
@@ -36,4 +36,11 @@ $btn-primary-bg: #000;
 .btn:hover, .btn-primary:hover {
   background-color: $brand-primary;
   border-color: $brand-primary;
+}
+
+// HTML base font size only impacts EveryAction embedded forms, because this site is using Bootstrap 3 (which
+// sets body and all other font sizes using px units derived from $font-size-base. EveryAction uses rem sizing.
+// Will need a different fix potentially down the road if upgrade to Bootstrap 4+.
+html {
+  font-size: 18px;
 }
