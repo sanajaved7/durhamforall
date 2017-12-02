@@ -19,13 +19,12 @@ class BlogIndexPage(Page):
 class BlogPage(Page):
     date = models.DateField("Post date")
     intro = models.CharField(max_length=250)
+    full_width = models.BooleanField("Show this post as full-width (no sidebar)?", default=False)
     body = RichTextField(blank=True)
-
 
     body = StreamField([
         ('paragraph', blocks.RichTextBlock()),
         ('html', blocks.RawHTMLBlock())
-
     ])
 
     search_fields = Page.search_fields + [
@@ -37,4 +36,8 @@ class BlogPage(Page):
         FieldPanel('date'),
         FieldPanel('intro'),
         StreamFieldPanel('body'),
+    ]
+
+    settings_panels = Page.settings_panels + [
+        FieldPanel('full_width'),
     ]
