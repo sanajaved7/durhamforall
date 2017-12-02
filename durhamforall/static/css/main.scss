@@ -1,0 +1,39 @@
+$navbar-height: 51px;
+$padding-vertical: 15px;
+$wagtail-color: rgb(0, 127, 127);
+$html-background-color: whitesmoke;
+
+/* Bootstrap customization */
+$font-family-sans-serif: "Oswald", sans-serif;
+$font-family-serif: "Droid Serif", serif;
+$font-family-base: $font-family-serif;
+$font-size-base: 15px;
+$headings-font-family: $font-family-sans-serif;
+$brand-primary: #53cfd7;
+$jumbotron-bg: #fff;
+
+// Navbar
+$navbar-inverse-link-color: #fff;
+$navbar-inverse-link-hover-color: #000;
+$navbar-inverse-link-hover-bg: $brand-primary;
+$navbar-inverse-link-active-bg: $brand-primary;
+
+// Buttons
+$btn-default-bg: rgb(204, 204, 204);
+$btn-default-color: rgb(102,102,102);
+$btn-border-radius-base: 0;
+$btn-border-radius-large: 0;
+$btn-primary-bg: #000;
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import 'bootstrap';
+
+.navbar, .btn {
+  font-family: $font-family-sans-serif;
+  text-transform: uppercase;
+}
+
+.btn:hover, .btn-primary:hover {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+}

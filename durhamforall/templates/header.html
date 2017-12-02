@@ -1,0 +1,45 @@
+{% load staticfiles compress %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Durham for All{% if page.title %} | {{ page.title }} {% endif %}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    <meta name="google-site-verification" content="f2hVuYD16U-6ZPjy_NTk8TBUHQ0dN2FGVnpbmWHxT98" />
+    <link rel="canonical" href="https://www.durhamforall.org/" />
+    <meta property="og:title" content="Durham for All{% if page.title %} | {{ page.title }} {% endif %}"/>
+    <meta property="og:url" content="http://www.durhamforall.org/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Durham For All"/>
+
+    {# External stylesheets #}
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/cupertino/jquery-ui.css" type="text/css" media="all">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Oswald:400,300,700|Lato:400,700,400italic,700italic|Bree+Serif|Josefin+Sans:700|Bitter:400,700,400italic|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+
+    {# Local static assets such as css, images and javascrpt should be stored at [yourapp]/static/[yourapp]/... #}
+    {% compress css %}
+        {# Custom stylesheets #}
+        {# SCSS compilation relies on django compressor #}
+        <link rel="stylesheet" type="text/x-scss" href="{% static "css/main.scss" %}" />
+    {% endcompress %}
+
+    {% block extra_css %}{% endblock %} {# Override this block in individual templates in order to add stylesheets on a template by template basis #}
+
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-99052710-1']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+    _gaq.push(['_setCustomVar', 1, 'UGC', 'false', 3]);
+    _gaq.push(['_setCustomVar', 1, 'Page type', 'Basic', 3]);
+  _gaq.push(['_trackPageview']);
+  _gaq.push(['_trackPageLoadTime']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
