@@ -4,9 +4,23 @@
 
 {% block body_class %}template-blogpage{% endblock %}
 
+{% block content_class %}
+{% if page.full_width %}
+{% else %}
+  {{ block.super }}
+{% endif %}
+{% endblock %}
+
+
 {% block content %}
  <div class="body-content">
     {% include_block page.body %}
  </div>
+{% endblock %}
 
+{% block sidebar %}
+{% if page.full_width %}
+{% else %}
+  {{ block.super }}
+{% endif %}
 {% endblock %}
