@@ -36,7 +36,7 @@ six==1.10.0
 static3==0.7.0
 Unidecode==0.4.21
 urllib3==1.22
-wagtail==1.13.1
+wagtail>=1.13,<1.14
 wagtail-modeltranslation==0.6.0rc2
 webencodings==0.5.1
 whitenoise==3.3.0
