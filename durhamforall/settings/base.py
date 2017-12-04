@@ -66,6 +66,7 @@ MIDDLEWARE = [
     'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
 ]
 
 ROOT_URLCONF = 'durhamforall.urls'
@@ -104,6 +105,11 @@ LOGGING = {
             'level': os.getenv('DJANGO_LOG_LEVEL', 'ERROR'),
         },
     },
+}
+
+ROLLBAR = {
+    'access_token': os.getenv('ROLLBAR_ACCESS_TOKEN', ''),
+    'environment': 'development',
 }
 
 
