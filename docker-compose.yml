@@ -22,3 +22,4 @@ services:
       - DJANGO_SETTINGS_MODULE=durhamforall.settings.dev-docker
       - DJANGO_LOG_LEVEL=WARNING
       - SECRET_KEY=testt
+      - ROLLBAR_ACCESS_TOKEN=${ROLLBAR_ACCESS_TOKEN}
