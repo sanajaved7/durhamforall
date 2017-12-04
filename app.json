@@ -1,0 +1,32 @@
+{
+  "name": "Durham for All Website",
+  "description": "",
+  "scripts": {
+    "postdeploy": "python manage.py migrate"
+  },
+  "env": {
+    "DJANGO_SETTINGS_MODULE": {
+      "required": true
+    },
+    "ROLLBAR_ACCESS_TOKEN": {
+      "required": true
+    },
+    "ROLLBAR_ENDPOINT": {
+      "required": true
+    },
+    "SECRET_KEY": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "heroku-postgresql",
+    "rollbar"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
