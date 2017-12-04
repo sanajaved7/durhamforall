@@ -8,6 +8,7 @@ env = os.environ.copy()
 SECRET_KEY = env['SECRET_KEY']
 
 DEBUG = False
+ROLLBAR['environment'] = 'production'
 
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
