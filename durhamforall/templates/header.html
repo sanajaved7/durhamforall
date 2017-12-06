@@ -13,9 +13,28 @@
     <meta property="og:site_name" content="Durham For All"/>
 
     {# External stylesheets #}
-    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/themes/cupertino/jquery-ui.css" type="text/css" media="all">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic|Oswald:400,300,700|Lato:400,700,400italic,700italic|Bree+Serif|Josefin+Sans:700|Bitter:400,700,400italic|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Oswald:400' rel='stylesheet' type='text/css'>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+     fbq('init', '176269692938015');
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+     <img height="1" width="1" 
+    src="https://www.facebook.com/tr?id=176269692938015&ev=PageView
+    &noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
 
     {# Local static assets such as css, images and javascrpt should be stored at [yourapp]/static/[yourapp]/... #}
     {% compress css %}
