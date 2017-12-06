@@ -29,6 +29,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ALLOWED_HOSTS = ['*']
 
+MEDIA_URL = "https://%s/" % AWS_S3_CUSTOM_DOMAIN
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
 try:
     from .local import *
 except ImportError:

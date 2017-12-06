@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -140,7 +141,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
@@ -156,6 +156,14 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+# AWS S3 uploads storage
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
 
 # django-compressor settings
 COMPRESS_PRECOMPILERS = (
