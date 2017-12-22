@@ -9,6 +9,14 @@ services:
       - POSTGRES_DB=django
     volumes:
       - ./.db:/docker-entrypoint-initdb.d
+  vendors:
+    image: python:3
+    working_dir: /mnt
+    volumes:
+       - .:/mnt
+    environment:
+      - PYTHONUSERBASE=/mnt/vendor
+    command: pip install -r requirements.txt --user --upgrade
   web:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
@@ -26,3 +34,4 @@ services:
       - AWS_STORAGE_BUCKET_NAME=durhamforall-web
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - PYTHONUSERBASE=/code/vendor
