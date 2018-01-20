@@ -1,3 +1,4 @@
+
 version: '3'
 
 services:
@@ -9,6 +10,9 @@ services:
       - POSTGRES_DB=django
     volumes:
       - ./.db:/docker-entrypoint-initdb.d
+      - ./postgres_data:/var/lib/postgresql/data
+    ports:
+      - "54320:5432"
   vendors:
     image: python:3
     working_dir: /mnt
@@ -21,7 +25,7 @@ services:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/code
+      - .:/mnt
     ports:
       - "8000:8000"
     depends_on:
@@ -34,4 +38,4 @@ services:
       - AWS_STORAGE_BUCKET_NAME=durhamforall-web
       - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
       - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
-      - PYTHONUSERBASE=/code/vendor
+      - PYTHONUSERBASE=/mnt/vendor
