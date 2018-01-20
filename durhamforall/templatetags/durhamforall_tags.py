@@ -1,4 +1,5 @@
 from django import template
+from wagtail_modeltranslation import translation
 import random
 
 register = template.Library()
@@ -47,6 +48,7 @@ def top_menu_children(context, parent):
         'request': context['request'],
 }
 
+
 @register.inclusion_tag('tags/facebook_video_embed.html')
 def endorsement_video():
     video_hrefs = [
@@ -58,3 +60,8 @@ def endorsement_video():
     return {
         'video_href': random.choice(video_hrefs),
     }
+
+
+@register.inclusion_tag('tags/language_switcher.html')
+def language_switcher():
+    return {}

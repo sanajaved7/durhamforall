@@ -1,16 +1,16 @@
 from .models import BlogPage, BlogIndexPage
-from wagtail_modeltranslation.translator import WagtailTranslationOptions
+from wagtail_modeltranslation.translation import TranslationOptions
 from wagtail_modeltranslation.translation import register
 
 @register(BlogPage)
-class BlogPageTR(WagtailTranslationOptions):
+class BlogPageTR(TranslationOptions):
     fields = (
         'intro',
         'body',
     )
 
 @register(BlogIndexPage)
-class BlogIndexPageTR(WagtailTranslationOptions):
+class BlogIndexPageTR(TranslationOptions):
     fields = (
         'intro',
     )

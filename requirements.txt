@@ -11,6 +11,7 @@ django-compressor==2.2
 django-libsass==0.7
 django-modelcluster==3.1
 django-storages==1.6.5
+-e git+https://github.com/deschler/django-modeltranslation@master#egg=django-modeltranslation
 django-taggit==0.22.1
 django-toolbelt==0.0.1
 django-treebeard==4.1.2
@@ -36,7 +37,7 @@ static3==0.7.0
 Unidecode==0.4.21
 urllib3==1.22
 wagtail==1.13.1
--e git+https://github.com/dmarcelino/wagtail-modeltranslation.git@27ac5491f22c03c8a5f7b28f753795458249f909#egg=wagtail_modeltranslation
+-e git+https://github.com/infoportugal/wagtail-modeltranslation.git@v0.8a1#egg=wagtail_modeltranslation
 webencodings==0.5.1
 whitenoise==3.3.0
 Willow==1.0
