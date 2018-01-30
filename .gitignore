@@ -10,4 +10,4 @@ __pycache__/
 /media/
 /src
 /vendor
-
+/postgres_data
