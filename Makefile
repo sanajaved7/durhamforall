@@ -1,9 +1,15 @@
 install-dependencies:
 	docker-compose run --rm vendors
 
-up:
+install:
+	docker-compose run --rm vendors
 	docker-compose up -d --build
+	make up
+
+up:
+	docker-compose up -d
 	docker-compose exec web python manage.py migrate
+	docker-compose exec web python manage.py loaddata site_base.json
 
 down:
 	docker-compose down

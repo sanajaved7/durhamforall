@@ -11,3 +11,5 @@ __pycache__/
 /src
 /vendor
 /postgres_data
+/.db/*
+!/.db/.gitkeep
