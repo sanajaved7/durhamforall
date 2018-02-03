@@ -1,14 +1,14 @@
-{% load staticfiles compress %}
+{% load i18n staticfiles compress %}
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Durham for All{% if page.title %} | {{ page.title }} {% endif %}</title>
+    <title>{% trans "Durham for All"%}{% if page.title %} | {{ page.title }} {% endif %}</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
     <meta name="google-site-verification" content="f2hVuYD16U-6ZPjy_NTk8TBUHQ0dN2FGVnpbmWHxT98" />
     <link rel="canonical" href="https://www.durhamforall.org/" />
     <meta property="og:title" content="Durham for All{% if page.title %} | {{ page.title }} {% endif %}"/>
-    <meta property="og:url" content="http://www.durhamforall.org/">
+    <meta property="og:url" content="http://www.durhamforall.org/{{ page.url }}">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Durham For All"/>
 

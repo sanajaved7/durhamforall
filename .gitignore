@@ -8,3 +8,6 @@ __pycache__/
 /venv/
 /static/
 /media/
+/src
+/vendor
+/postgres_data

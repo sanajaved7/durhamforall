@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'wagtail.wagtailsearch',
     'wagtail.wagtailadmin',
     'wagtail.wagtailcore',
+    'wagtail_modeltranslation',
+    'wagtail_modeltranslation.makemigrations',
     'modelcluster',
     'taggit',
     'compressor',
@@ -62,6 +64,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
 
     'wagtail.wagtailcore.middleware.SiteMiddleware',
     'wagtail.wagtailredirects.middleware.RedirectMiddleware',
@@ -138,6 +141,15 @@ USE_L10N = True
 
 USE_TZ = True
 
+LANGUAGES = (
+    ('en', u'English'),
+    ('es', u'Spanish'),
+ )
+
+LOCALE_PATHS = [
+    os.path.join(PROJECT_DIR, 'locale'),
+]
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -176,4 +188,4 @@ WAGTAIL_SITE_NAME = "durhamforall"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'http://example.com'
+BASE_URL = 'http://www.durhamforall.org'

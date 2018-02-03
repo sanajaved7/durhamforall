@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-20 23:37+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: durhamforall/templates/404.html:7
+msgid "Page not found"
+msgstr "Página no encontrada"
+
+#: durhamforall/templates/404.html:9
+msgid "Sorry, this page could not be found."
+msgstr "Lo sentimos; no se pudo encontrar la página solicitada."
+
+#: durhamforall/templates/500.html:10 durhamforall/templates/500.html:14
+msgid "Internal server error"
+msgstr "Error interno del servidor"
+
+#: durhamforall/templates/500.html:16
+msgid "Sorry, there seems to be an error. Please try again soon."
+msgstr "Lo sentimos, parece que se produjo un error. Favor de intentar de nuevo más tarde."
+
+#: durhamforall/templates/base.html:8 durhamforall/templates/header.html:5
+#: durhamforall/templates/tags/facebook_video_embed.html:15
+msgid "Durham for All"
+msgstr "Durham para Tod@s"
+
+#: durhamforall/templates/base.html:29
+msgid "Donate"
+msgstr "Donar"
+
+#: durhamforall/templates/base.html:30
+msgid "Join Us!"
+msgstr "¡Únete con nosotr@s!"
+
+#: durhamforall/templates/base.html:31
+msgid "Contact Us"
+msgstr "Contáctanos"
+
+#: durhamforall/templates/tags/facebook_video_embed.html:11
+msgid ""
+"10k Strong is about breaking the racial, economic, and fear barriers that "
+"keep Durham&#039;s progressive majority from actually coming together and "
+"making the changes that would really impact our people&#039;s lives."
+msgstr ""
+"La Fuerza de 10 Mil busca romper las barreras raciales, económicas y de miedo que "
+"hacen que la mayoría progresista de Durham nunca una esfuerzos para "
+"hacer los cambios que realmente podrían beneficiar las vidas de nuestra comunidad."
+
+#: durhamforall/templates/tags/facebook_video_embed.html:13
+msgid "Durham, sign the #10kStrong Pledge at: durhamforall.org/pledge"
+msgstr "Durham, Únete al movimiento de #Fuerzade10Mil en: durhamforall.org/pledge"
+
+#: durhamforall/templates/tags/facebook_video_embed.html:15
+msgid "Created by Ashlyn Nuckols. Music by Sijal Nasralla."
+msgstr "Creado por Ashlyn Nuckols. Música por Sijal Nasralla"
+
+#: durhamforall/templates/tags/facebook_video_embed.html:15
+msgid "Posted by"
+msgstr "Subido por"

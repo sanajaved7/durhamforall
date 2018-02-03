@@ -1,11 +1,11 @@
+{% load static i18n wagtailuserbar durhamforall_tags %}
 <!DOCTYPE html>
-{% load static wagtailuserbar durhamforall_tags %}
 <html>
 {% include "header.html" %}
 <body class="{% block body_class %}{% endblock %}">
 
 <div class="container">
-    <h1>Durham for All{% if page.title != "Home"%} | {{ page.title }} {% endif %}</h1>
+    <h1>{% trans "Durham for All"%}{% if page.title != "Home"%} | {{ page.title }} {% endif %}</h1>
 </div>
 {% block menu %}
 {% get_site_root as site_root %}
@@ -21,9 +21,9 @@
     </div>
     {% block sidebar %}
     <div class="col-md-4">
-        <a class="btn btn-default btn-lg btn-block" href="/donate">Donate</a>
-        <a class="btn btn-primary btn-lg btn-block" href="/pledge">Join Us!</a>
-        <a class="btn btn-default btn-lg btn-block" href="mailto:info@durhamforall.org">Contact Us</a>
+        <a class="btn btn-default btn-lg btn-block" href="/donate">{%  trans "Donate" %}</a>
+        <a class="btn btn-primary btn-lg btn-block" href="/pledge">{%  trans "Join Us!" %}</a>
+        <a class="btn btn-default btn-lg btn-block" href="mailto:info@durhamforall.org">{% trans "Contact Us" %}</a>
     </div>
     {% endblock %}
 </div>
