@@ -2,7 +2,7 @@
   "name": "Durham for All Website",
   "description": "",
   "scripts": {
-    "postdeploy": "python manage.py migrate"
+    "postdeploy": "python manage.py loaddata site_base.json && python manage.py migrate"
   },
   "env": {
     "DJANGO_SETTINGS_MODULE": {
