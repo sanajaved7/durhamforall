@@ -8,17 +8,7 @@ from wagtail.wagtailcore import blocks
 from wagtail.wagtailimages.blocks import ImageChooserBlock
 
 
-class BlogIndexPage(Page):
-    intro = RichTextField(blank=True)
-
-    content_panels = Page.content_panels + [
-        FieldPanel('intro', classname="full")
-    ]
-
-
 class BlogPage(Page):
-    date = models.DateField("Post date")
-    intro = models.CharField(max_length=250)
     full_width = models.BooleanField("Show this post as full-width (no sidebar)?", default=False)
     body = RichTextField(blank=True)
 
@@ -28,13 +18,10 @@ class BlogPage(Page):
     ])
 
     search_fields = Page.search_fields + [
-        index.SearchField('intro'),
         index.SearchField('body'),
     ]
 
     content_panels = Page.content_panels + [
-        FieldPanel('date'),
-        FieldPanel('intro'),
         StreamFieldPanel('body'),
     ]
 
