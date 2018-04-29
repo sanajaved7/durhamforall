@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'wagtail.wagtailcore',
     'wagtail_modeltranslation',
     'wagtail_modeltranslation.makemigrations',
+    'wagtail.contrib.table_block',
     'modelcluster',
     'taggit',
     'compressor',

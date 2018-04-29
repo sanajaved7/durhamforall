@@ -1382,16 +1382,6 @@
   }
 },
 {
-  "model": "wagtailcore.pageviewrestriction",
-  "pk": 2,
-  "fields": {
-    "restriction_type": "password",
-    "password": "durhamforall",
-    "page": 3,
-    "groups": []
-  }
-},
-{
   "model": "wagtailcore.grouppagepermission",
   "pk": 1,
   "fields": {
