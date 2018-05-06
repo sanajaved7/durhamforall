@@ -4,9 +4,9 @@ from __future__ import unicode_literals
 
 from django.db import migrations
 import wagtail.contrib.table_block.blocks
-import wagtail.wagtailcore.blocks
-import wagtail.wagtailcore.fields
-import wagtail.wagtailimages.blocks
+import wagtail.core.blocks
+import wagtail.core.fields
+import wagtail.images.blocks
 
 
 class Migration(migrations.Migration):
@@ -18,16 +18,16 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='blogpage',
             name='body',
-            field=wagtail.wagtailcore.fields.StreamField((('paragraph', wagtail.wagtailcore.blocks.RichTextBlock()), ('html', wagtail.wagtailcore.blocks.RawHTMLBlock()), ('table', wagtail.contrib.table_block.blocks.TableBlock()), ('image', wagtail.wagtailimages.blocks.ImageChooserBlock()))),
+            field=wagtail.core.fields.StreamField((('paragraph', wagtail.core.blocks.RichTextBlock()), ('html', wagtail.core.blocks.RawHTMLBlock()), ('table', wagtail.contrib.table_block.blocks.TableBlock()), ('image', wagtail.images.blocks.ImageChooserBlock()))),
         ),
         migrations.AlterField(
             model_name='blogpage',
             name='body_en',
-            field=wagtail.wagtailcore.fields.StreamField((('paragraph', wagtail.wagtailcore.blocks.RichTextBlock()), ('html', wagtail.wagtailcore.blocks.RawHTMLBlock()), ('table', wagtail.contrib.table_block.blocks.TableBlock()), ('image', wagtail.wagtailimages.blocks.ImageChooserBlock())), null=True),
+            field=wagtail.core.fields.StreamField((('paragraph', wagtail.core.blocks.RichTextBlock()), ('html', wagtail.core.blocks.RawHTMLBlock()), ('table', wagtail.contrib.table_block.blocks.TableBlock()), ('image', wagtail.images.blocks.ImageChooserBlock())), null=True),
         ),
         migrations.AlterField(
             model_name='blogpage',
             name='body_es',
-            field=wagtail.wagtailcore.fields.StreamField((('paragraph', wagtail.wagtailcore.blocks.RichTextBlock()), ('html', wagtail.wagtailcore.blocks.RawHTMLBlock()), ('table', wagtail.contrib.table_block.blocks.TableBlock()), ('image', wagtail.wagtailimages.blocks.ImageChooserBlock())), null=True),
+            field=wagtail.core.fields.StreamField((('paragraph', wagtail.core.blocks.RichTextBlock()), ('html', wagtail.core.blocks.RawHTMLBlock()), ('table', wagtail.contrib.table_block.blocks.TableBlock()), ('image', wagtail.images.blocks.ImageChooserBlock())), null=True),
         ),
     ]

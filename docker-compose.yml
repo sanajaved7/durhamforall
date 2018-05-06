@@ -21,7 +21,7 @@ services:
        - .:/mnt
     environment:
       - PYTHONUSERBASE=/mnt/vendor
-    command: pip install -r requirements.txt --user --upgrade
+    command: pip install -r requirements.txt --user
   web:
     build: .
     command: python3 manage.py runserver 0.0.0.0:8000
