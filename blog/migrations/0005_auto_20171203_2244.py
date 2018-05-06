@@ -3,8 +3,8 @@
 from __future__ import unicode_literals
 
 from django.db import migrations, models
-import wagtail.wagtailcore.blocks
-import wagtail.wagtailcore.fields
+import wagtail.core.blocks
+import wagtail.core.fields
 
 
 class Migration(migrations.Migration):
@@ -17,12 +17,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='blogindexpage',
             name='intro_en',
-            field=wagtail.wagtailcore.fields.RichTextField(blank=True, null=True),
+            field=wagtail.core.fields.RichTextField(blank=True, null=True),
         ),
         migrations.AddField(
             model_name='blogindexpage',
             name='intro_es',
-            field=wagtail.wagtailcore.fields.RichTextField(blank=True, null=True),
+            field=wagtail.core.fields.RichTextField(blank=True, null=True),
         ),
         migrations.AddField(
             model_name='blogindexpage',
@@ -77,12 +77,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='blogpage',
             name='body_en',
-            field=wagtail.wagtailcore.fields.StreamField((('paragraph', wagtail.wagtailcore.blocks.RichTextBlock()), ('html', wagtail.wagtailcore.blocks.RawHTMLBlock())), null=True),
+            field=wagtail.core.fields.StreamField((('paragraph', wagtail.core.blocks.RichTextBlock()), ('html', wagtail.core.blocks.RawHTMLBlock())), null=True),
         ),
         migrations.AddField(
             model_name='blogpage',
             name='body_es',
-            field=wagtail.wagtailcore.fields.StreamField((('paragraph', wagtail.wagtailcore.blocks.RichTextBlock()), ('html', wagtail.wagtailcore.blocks.RawHTMLBlock())), null=True),
+            field=wagtail.core.fields.StreamField((('paragraph', wagtail.core.blocks.RichTextBlock()), ('html', wagtail.core.blocks.RawHTMLBlock())), null=True),
         ),
         migrations.AddField(
             model_name='blogpage',

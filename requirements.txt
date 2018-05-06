@@ -9,14 +9,15 @@ Django==1.11.5
 django-appconf==1.0.2
 django-compressor==2.2
 django-libsass==0.7
-django-modelcluster==3.1
-django-storages==1.6.5
+django-modelcluster==4.1
 django-modeltranslation==0.12.2
-django-taggit==0.22.1
+django-storages==1.6.5
+django-taggit==0.22.2
 django-toolbelt==0.0.1
-django-treebeard==4.1.2
-djangorestframework==3.6.4
+django-treebeard==4.3
+djangorestframework==3.8.2
 docutils==0.14
+draftjs-exporter==2.0.0
 gunicorn==19.7.1
 html5lib==0.999999999
 idna==2.6
@@ -36,8 +37,8 @@ six==1.10.0
 static3==0.7.0
 Unidecode==0.4.21
 urllib3==1.22
-wagtail==1.13.1
-wagtail-modeltranslation==0.8
+wagtail==2.0.1
+-e git+https://github.com/infoportugal/wagtail-modeltranslation.git@v0.9.0#egg=wagtail_modeltranslation
 webencodings==0.5.1
 whitenoise==3.3.0
-Willow==1.0
+Willow==1.1
