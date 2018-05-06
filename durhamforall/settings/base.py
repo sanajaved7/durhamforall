@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'durhamforall',
     'search',
     'blog',
+    'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
     'wagtail.embeds',
     'wagtail.sites',
