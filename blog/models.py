@@ -11,7 +11,6 @@ from wagtail.contrib.table_block.blocks import TableBlock
 
 class BlogPage(Page):
     full_width = models.BooleanField("Show this post as full-width (no sidebar)?", default=False)
-    body = RichTextField(blank=True)
 
     body = StreamField([
         ('paragraph', blocks.RichTextBlock()),
